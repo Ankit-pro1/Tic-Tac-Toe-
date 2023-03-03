@@ -1,0 +1,63 @@
+/* Import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+}
+body{
+    background-color: #308171;
+}
+.select-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    /* display: none; */
+}
+.select-box header{
+    /* background-color: red; */
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: 2px solid #000;
+    text-align: center;
+}
+.select-box .content{
+    /* background-color: gray; */
+    margin-top: 8px;
+}
+.select-box .title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.select-box .options{
+    display: flex;
+    width: 100%;
+}
+.select-box .options button{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #308171;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.select-box .options button:hover{
+    transform: scale(1.1);
+}
+.select-box .options .player-x{
+    margin-right: 5px;
+}
+.select-box .options .player-o{
+    margin-left: 5px;
+}
