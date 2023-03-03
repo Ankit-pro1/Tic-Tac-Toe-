@@ -10,6 +10,15 @@
 body{
     background-color: #308171;
 }
+.playboard{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* border-radius: 5px; */
+    max-width: 330px;
+    width: 100%;
+}
 .select-box{
     position: absolute;
     top: 50%;
@@ -20,7 +29,7 @@ body{
     border-radius: 5px;
     max-width: 330px;
     width: 100%;
-    /* display: none; */
+    display: none;
 }
 .select-box header{
     /* background-color: red; */
@@ -62,4 +71,65 @@ body{
 }
 .select-box .options .player-o{
     margin-left: 5px;
+}
+
+
+/* Playboard */
+.playboard .details{
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.playboard .player{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+.playboard .player span{
+    /* background-color: red; */
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 5;
+    /* color: #fff; */
+}
+.playboard .player span:first-child{
+    color: #fff;
+}
+.playboard .player .turn-x{
+    margin-right: 2px;
+}
+.playboard .player .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #308171;
+    border-radius: 5px;
+    z-index: 2;
+}
+.playboard .play-area{
+    margin-top: 20px;
+}
+.playboard section{
+    display: flex;
+    justify-content: space-between;
+}
+.playboard section span{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    margin:6px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #308171;
+    cursor: pointer;
 }
