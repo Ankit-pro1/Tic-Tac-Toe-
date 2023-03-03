@@ -10,6 +10,17 @@
 body{
     background-color: #308171;
 }
+.result-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 330px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
 .playboard{
     position: absolute;
     top: 50%;
@@ -18,6 +29,7 @@ body{
     /* border-radius: 5px; */
     max-width: 330px;
     width: 100%;
+    display: none;
 }
 .select-box{
     position: absolute;
@@ -51,7 +63,7 @@ body{
     display: flex;
     width: 100%;
 }
-.select-box .options button{
+.select-box .options button,.result-box .btn button{
     width: 100%;
     outline: none;
     border: none;
@@ -63,7 +75,7 @@ body{
     color: #fff;
     transition: all 0.3s ease;
 }
-.select-box .options button:hover{
+.select-box .options button:hover,.result-box .btn button:hover{
     transform: scale(1.1);
 }
 .select-box .options .player-x{
@@ -86,7 +98,6 @@ body{
     position: relative;
 }
 .playboard .player span{
-    /* background-color: red; */
     font-size: 18px;
     font-weight: 500;
     width: 100%;
@@ -94,7 +105,6 @@ body{
     border-radius: 5px;
     text-align: center;
     z-index: 5;
-    /* color: #fff; */
 }
 .playboard .player span:first-child{
     color: #fff;
@@ -132,4 +142,21 @@ body{
     font-weight: 500;
     color: #308171;
     cursor: pointer;
+}
+
+/* Result BOx */
+.result-box .won-text{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+} 
+.result-box .won-text span{
+    font-size: 22px;
+    font-weight: 600;
+}
+.result-box .btn{
+    text-align: center;
+}
+.result-box .btn button{
+    width: 50%;
 }
