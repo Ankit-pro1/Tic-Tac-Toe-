@@ -20,6 +20,7 @@ body{
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
+    display: none;
 }
 .playboard{
     position: absolute;
@@ -29,7 +30,12 @@ body{
     /* border-radius: 5px; */
     max-width: 330px;
     width: 100%;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.playboard.show{
+    opacity: 1;
+    pointer-events: auto;
 }
 .select-box{
     position: absolute;
@@ -41,7 +47,10 @@ body{
     border-radius: 5px;
     max-width: 330px;
     width: 100%;
-    display: none;
+}
+.select-box.hide{
+    opacity: 0;
+    pointer-events: none;
 }
 .select-box header{
     /* background-color: red; */
@@ -92,7 +101,7 @@ body{
     background-color: #fff;
     border-radius: 5px;
 }
-.playboard .player{
+.playboard .player {
     display: flex;
     width: 100%;
     position: relative;
@@ -105,10 +114,21 @@ body{
     border-radius: 5px;
     text-align: center;
     z-index: 5;
+    color: #308171;
 }
 .playboard .player span:first-child{
     color: #fff;
 }
+.playboard .player.active span:first-child{
+    color: #308171;
+}
+.playboard .player.active span:nth-child(2){
+    color: #fff;
+}
+.playboard .player.active .slider{
+    left: 50%;
+}
+
 .playboard .player .turn-x{
     margin-right: 2px;
 }
